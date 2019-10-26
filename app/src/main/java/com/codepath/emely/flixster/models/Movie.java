@@ -26,7 +26,7 @@ public class Movie {
         title = jsonObject.getString("title");
         overview = jsonObject.getString("overview");
         rating = jsonObject.getDouble("vote_average");
-        movieId = jsonObject.getInt("movieId");
+        movieId = jsonObject.getInt("id");
     }
     public static List<Movie> fromJsonArray(JSONArray movieJsonArray) throws JSONException {
         List<Movie> movies = new ArrayList<>();
@@ -55,4 +55,5 @@ public class Movie {
     public int getMovieId() {
         return movieId;
     }
+
 }
